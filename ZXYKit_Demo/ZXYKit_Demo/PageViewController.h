@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  PageViewController.h
 //  ZXYKit_Demo
 //
-//  Created by tarena on 16/1/20.
+//  Created by 赵翔宇 on 16/4/11.
 //  Copyright © 2016年 tarena. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface PageViewController : UIViewController
 
 @end
-
