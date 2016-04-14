@@ -180,7 +180,7 @@ static NSInteger imageBtnCount = 3;
         }
     }
     if (currentIndex != lastIndex) {
-        [self.delegate ZXYPageView:self currentPage:currentIndex];
+        if ([self.delegate respondsToSelector:@selector(ZXYPageView: currentPage:)]) [self.delegate ZXYPageView:self currentPage:currentIndex];
         if (self.textLabel) self.textLabel.text = self.titles[currentIndex];
         if (self.pageControl) self.pageControl.currentPage = currentIndex;
     }
@@ -246,7 +246,9 @@ static NSInteger imageBtnCount = 3;
 	return _contentView;
 }
 - (void)imageBtnClick:(UIButton *)imageBtn{
-    [self.delegate ZXYPageView:self didClickAtCurrentPage:imageBtn.tag];
+    if ([self.delegate respondsToSelector:@selector(ZXYPageView:didClickAtCurrentPage:)]) {
+        [self.delegate ZXYPageView:self didClickAtCurrentPage:imageBtn.tag];
+    }
 }
 
 
