@@ -10,7 +10,6 @@
 #import "ZXYPageView.h"
 
 @interface PageViewController ()<ZXYPageViewDelegate,ZXYPageViewDataSource>
-@property (weak, nonatomic) IBOutlet ZXYPageView *scrollView2;
 
 @end
 

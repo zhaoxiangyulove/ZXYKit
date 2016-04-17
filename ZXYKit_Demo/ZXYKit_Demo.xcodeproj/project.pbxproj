@@ -14,6 +14,9 @@
 		852B88021C4F936E00D9479A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852B88001C4F936E00D9479A /* LaunchScreen.storyboard */; };
 		EC3531F61CBBB47E006D0F50 /* ZXYPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3531F51CBBB47E006D0F50 /* ZXYPageView.m */; };
 		EC3531F91CBBB794006D0F50 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3531F81CBBB794006D0F50 /* PageViewController.m */; };
+		EC4CCCEA1CC3D0D500BD08E4 /* ZXYMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4CCCE71CC3D0D500BD08E4 /* ZXYMenuView.m */; };
+		EC4CCCEB1CC3D0D500BD08E4 /* ZXYMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4CCCE91CC3D0D500BD08E4 /* ZXYMenuViewController.m */; };
+		EC4CCCEF1CC3D25500BD08E4 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4CCCEE1CC3D25500BD08E4 /* MenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		EC3531F51CBBB47E006D0F50 /* ZXYPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYPageView.m; sourceTree = "<group>"; };
 		EC3531F71CBBB794006D0F50 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		EC3531F81CBBB794006D0F50 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		EC4CCCE61CC3D0D500BD08E4 /* ZXYMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYMenuView.h; sourceTree = "<group>"; };
+		EC4CCCE71CC3D0D500BD08E4 /* ZXYMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYMenuView.m; sourceTree = "<group>"; };
+		EC4CCCE81CC3D0D500BD08E4 /* ZXYMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYMenuViewController.h; sourceTree = "<group>"; };
+		EC4CCCE91CC3D0D500BD08E4 /* ZXYMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYMenuViewController.m; sourceTree = "<group>"; };
+		EC4CCCED1CC3D25500BD08E4 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		EC4CCCEE1CC3D25500BD08E4 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +75,7 @@
 				852B87F61C4F936E00D9479A /* AppDelegate.m */,
 				EC3531F71CBBB794006D0F50 /* PageViewController.h */,
 				EC3531F81CBBB794006D0F50 /* PageViewController.m */,
+				EC4CCCEC1CC3D19B00BD08E4 /* MenuViewController */,
 				852B87FB1C4F936E00D9479A /* Main.storyboard */,
 				852B87FE1C4F936E00D9479A /* Assets.xcassets */,
 				852B88001C4F936E00D9479A /* LaunchScreen.storyboard */,
@@ -86,6 +96,7 @@
 		EC3531F21CBBB47E006D0F50 /* Kit */ = {
 			isa = PBXGroup;
 			children = (
+				EC4CCCE51CC3D0D500BD08E4 /* ZXYMenuView */,
 				EC3531F31CBBB47E006D0F50 /* PageView */,
 			);
 			name = Kit;
@@ -99,6 +110,26 @@
 				EC3531F51CBBB47E006D0F50 /* ZXYPageView.m */,
 			);
 			path = PageView;
+			sourceTree = "<group>";
+		};
+		EC4CCCE51CC3D0D500BD08E4 /* ZXYMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				EC4CCCE61CC3D0D500BD08E4 /* ZXYMenuView.h */,
+				EC4CCCE71CC3D0D500BD08E4 /* ZXYMenuView.m */,
+				EC4CCCE81CC3D0D500BD08E4 /* ZXYMenuViewController.h */,
+				EC4CCCE91CC3D0D500BD08E4 /* ZXYMenuViewController.m */,
+			);
+			path = ZXYMenuView;
+			sourceTree = "<group>";
+		};
+		EC4CCCEC1CC3D19B00BD08E4 /* MenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC4CCCED1CC3D25500BD08E4 /* MenuViewController.h */,
+				EC4CCCEE1CC3D25500BD08E4 /* MenuViewController.m */,
+			);
+			path = MenuViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +207,9 @@
 				852B87F41C4F936E00D9479A /* main.m in Sources */,
 				EC3531F61CBBB47E006D0F50 /* ZXYPageView.m in Sources */,
 				EC3531F91CBBB794006D0F50 /* PageViewController.m in Sources */,
+				EC4CCCEF1CC3D25500BD08E4 /* MenuViewController.m in Sources */,
+				EC4CCCEA1CC3D0D500BD08E4 /* ZXYMenuView.m in Sources */,
+				EC4CCCEB1CC3D0D500BD08E4 /* ZXYMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
