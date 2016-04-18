@@ -14,6 +14,10 @@
 		852B88021C4F936E00D9479A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852B88001C4F936E00D9479A /* LaunchScreen.storyboard */; };
 		EC3531F61CBBB47E006D0F50 /* ZXYPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3531F51CBBB47E006D0F50 /* ZXYPageView.m */; };
 		EC3531F91CBBB794006D0F50 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3531F81CBBB794006D0F50 /* PageViewController.m */; };
+		EC435CAE1CC5221B005254FA /* ZXYGraphModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC435CAB1CC5221B005254FA /* ZXYGraphModel.m */; };
+		EC435CAF1CC5221B005254FA /* ZXYGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC435CAD1CC5221B005254FA /* ZXYGraphView.m */; };
+		EC435CB41CC52488005254FA /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC435CB31CC52488005254FA /* GraphViewController.m */; };
+		EC435CB81CC526CC005254FA /* UIColor+ZXYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EC435CB71CC526CC005254FA /* UIColor+ZXYColor.m */; };
 		EC4CCCEA1CC3D0D500BD08E4 /* ZXYMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4CCCE71CC3D0D500BD08E4 /* ZXYMenuView.m */; };
 		EC4CCCEB1CC3D0D500BD08E4 /* ZXYMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4CCCE91CC3D0D500BD08E4 /* ZXYMenuViewController.m */; };
 		EC4CCCEF1CC3D25500BD08E4 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4CCCEE1CC3D25500BD08E4 /* MenuViewController.m */; };
@@ -32,6 +36,14 @@
 		EC3531F51CBBB47E006D0F50 /* ZXYPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYPageView.m; sourceTree = "<group>"; };
 		EC3531F71CBBB794006D0F50 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		EC3531F81CBBB794006D0F50 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		EC435CAA1CC5221B005254FA /* ZXYGraphModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYGraphModel.h; sourceTree = "<group>"; };
+		EC435CAB1CC5221B005254FA /* ZXYGraphModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYGraphModel.m; sourceTree = "<group>"; };
+		EC435CAC1CC5221B005254FA /* ZXYGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYGraphView.h; sourceTree = "<group>"; };
+		EC435CAD1CC5221B005254FA /* ZXYGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYGraphView.m; sourceTree = "<group>"; };
+		EC435CB21CC52488005254FA /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		EC435CB31CC52488005254FA /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
+		EC435CB61CC526CC005254FA /* UIColor+ZXYColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZXYColor.h"; sourceTree = "<group>"; };
+		EC435CB71CC526CC005254FA /* UIColor+ZXYColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZXYColor.m"; sourceTree = "<group>"; };
 		EC4CCCE61CC3D0D500BD08E4 /* ZXYMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYMenuView.h; sourceTree = "<group>"; };
 		EC4CCCE71CC3D0D500BD08E4 /* ZXYMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYMenuView.m; sourceTree = "<group>"; };
 		EC4CCCE81CC3D0D500BD08E4 /* ZXYMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYMenuViewController.h; sourceTree = "<group>"; };
@@ -75,11 +87,13 @@
 				852B87F61C4F936E00D9479A /* AppDelegate.m */,
 				EC3531F71CBBB794006D0F50 /* PageViewController.h */,
 				EC3531F81CBBB794006D0F50 /* PageViewController.m */,
+				EC435CB11CC52433005254FA /* GraphViewController */,
 				EC4CCCEC1CC3D19B00BD08E4 /* MenuViewController */,
 				852B87FB1C4F936E00D9479A /* Main.storyboard */,
 				852B87FE1C4F936E00D9479A /* Assets.xcassets */,
 				852B88001C4F936E00D9479A /* LaunchScreen.storyboard */,
 				852B88031C4F936E00D9479A /* Info.plist */,
+				EC435CB51CC526CC005254FA /* Category */,
 				852B87F21C4F936E00D9479A /* Supporting Files */,
 			);
 			path = ZXYKit_Demo;
@@ -96,6 +110,7 @@
 		EC3531F21CBBB47E006D0F50 /* Kit */ = {
 			isa = PBXGroup;
 			children = (
+				EC435CA91CC5221B005254FA /* ZXYGraph */,
 				EC4CCCE51CC3D0D500BD08E4 /* ZXYMenuView */,
 				EC3531F31CBBB47E006D0F50 /* PageView */,
 			);
@@ -110,6 +125,37 @@
 				EC3531F51CBBB47E006D0F50 /* ZXYPageView.m */,
 			);
 			path = PageView;
+			sourceTree = "<group>";
+		};
+		EC435CA91CC5221B005254FA /* ZXYGraph */ = {
+			isa = PBXGroup;
+			children = (
+				EC435CAA1CC5221B005254FA /* ZXYGraphModel.h */,
+				EC435CAB1CC5221B005254FA /* ZXYGraphModel.m */,
+				EC435CAC1CC5221B005254FA /* ZXYGraphView.h */,
+				EC435CAD1CC5221B005254FA /* ZXYGraphView.m */,
+			);
+			name = ZXYGraph;
+			path = ZXYMenuView/ZXYGraph;
+			sourceTree = "<group>";
+		};
+		EC435CB11CC52433005254FA /* GraphViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC435CB21CC52488005254FA /* GraphViewController.h */,
+				EC435CB31CC52488005254FA /* GraphViewController.m */,
+			);
+			name = GraphViewController;
+			path = MenuViewController/GraphViewController;
+			sourceTree = "<group>";
+		};
+		EC435CB51CC526CC005254FA /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				EC435CB61CC526CC005254FA /* UIColor+ZXYColor.h */,
+				EC435CB71CC526CC005254FA /* UIColor+ZXYColor.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		EC4CCCE51CC3D0D500BD08E4 /* ZXYMenuView */ = {
@@ -203,9 +249,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC435CAF1CC5221B005254FA /* ZXYGraphView.m in Sources */,
+				EC435CAE1CC5221B005254FA /* ZXYGraphModel.m in Sources */,
 				852B87F71C4F936E00D9479A /* AppDelegate.m in Sources */,
+				EC435CB41CC52488005254FA /* GraphViewController.m in Sources */,
 				852B87F41C4F936E00D9479A /* main.m in Sources */,
 				EC3531F61CBBB47E006D0F50 /* ZXYPageView.m in Sources */,
+				EC435CB81CC526CC005254FA /* UIColor+ZXYColor.m in Sources */,
 				EC3531F91CBBB794006D0F50 /* PageViewController.m in Sources */,
 				EC4CCCEF1CC3D25500BD08E4 /* MenuViewController.m in Sources */,
 				EC4CCCEA1CC3D0D500BD08E4 /* ZXYMenuView.m in Sources */,

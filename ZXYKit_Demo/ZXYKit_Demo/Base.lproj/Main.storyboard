@@ -56,6 +56,26 @@
                                             <segue destination="EcF-Ns-jyg" kind="modal" id="39z-Gu-O4b"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="dS4-yH-w45" style="IBUITableViewCellStyleDefault" id="vPs-Rr-nF0">
+                                        <rect key="frame" x="0.0" y="187" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vPs-Rr-nF0" id="fn0-FV-Avs">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="GraphView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dS4-yH-w45">
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="tmt-j0-feH" kind="push" id="9j7-Cm-Vyz"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -69,6 +89,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bnf-nZ-r1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750.5" y="356.5"/>
+        </scene>
+        <!--Graph View Controller-->
+        <scene sceneID="iow-JW-037">
+            <objects>
+                <viewController id="tmt-j0-feH" customClass="GraphViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HOy-8r-ZCE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z9x-Dh-B3h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aZL-6y-nbj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y8d-h0-inq" customClass="ZXYGraphView">
+                                <rect key="frame" x="62" y="112" width="250" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k53-HL-7dJ">
+                                <rect key="frame" x="139" y="434" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPB-9z-IFi">
+                                <rect key="frame" x="139" y="487" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOC-Kr-Ghy">
+                                <rect key="frame" x="172" y="543" width="30" height="30"/>
+                                <state key="normal" title="增加"/>
+                                <connections>
+                                    <action selector="addGraphModel:" destination="tmt-j0-feH" eventType="touchUpInside" id="JLc-tD-HmO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tmo-DM-stA"/>
+                    <connections>
+                        <outlet property="graphView" destination="Y8d-h0-inq" id="NKJ-FJ-QpY"/>
+                        <outlet property="titleFeild" destination="k53-HL-7dJ" id="inz-3s-yDR"/>
+                        <outlet property="valueFeild" destination="iPB-9z-IFi" id="mwz-pL-nTD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DtL-2g-uFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1217.5" y="546.5"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="5sj-Vz-CV7">
@@ -87,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZK3-JV-2sF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1271.5" y="-162.5"/>
+            <point key="canvasLocation" x="1243.5" y="-282.5"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="HJW-If-OeW">
@@ -106,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mC8-V2-qR2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1271.5" y="582.5"/>
+            <point key="canvasLocation" x="1427.5" y="-63.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bwi-R0-6aN">
