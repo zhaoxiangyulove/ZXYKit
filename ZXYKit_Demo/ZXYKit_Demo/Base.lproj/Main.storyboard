@@ -76,6 +76,26 @@
                                             <segue destination="tmt-j0-feH" kind="push" id="9j7-Cm-Vyz"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="QZT-b5-C68" style="IBUITableViewCellStyleDefault" id="Zfc-nf-WP3">
+                                        <rect key="frame" x="0.0" y="231" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zfc-nf-WP3" id="Znr-xG-mhR">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="pickImageView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QZT-b5-C68">
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="beX-FA-IFR" kind="push" id="pdV-fC-pp0"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -135,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DtL-2g-uFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1217.5" y="546.5"/>
+            <point key="canvasLocation" x="1258.5" y="433.5"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="5sj-Vz-CV7">
@@ -193,6 +213,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boY-YV-v6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="315" y="357"/>
+        </scene>
+        <!--Pick Image View Controller-->
+        <scene sceneID="zrm-vf-pZS">
+            <objects>
+                <viewController id="beX-FA-IFR" customClass="PickImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iG2-IG-hQq"/>
+                        <viewControllerLayoutGuide type="bottom" id="GMU-5Y-Xvi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MmA-VD-iGO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7wM-FP-UvC">
+                                <rect key="frame" x="46" y="402" width="258" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80D-kB-BJc">
+                                <rect key="frame" x="152" y="283" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="chooseImage:" destination="beX-FA-IFR" eventType="touchUpInside" id="aBw-7I-slI"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="E9r-FG-iPi">
+                                <rect key="frame" x="46" y="470" width="258" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hex-Gj-849">
+                                <rect key="frame" x="88" y="534" width="73" height="30"/>
+                                <state key="normal" title="随机颜色"/>
+                                <connections>
+                                    <action selector="changeColor:" destination="beX-FA-IFR" eventType="touchUpInside" id="mf6-EL-fyj"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Mr-Yg-Mog">
+                                <rect key="frame" x="169" y="534" width="81" height="46"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X28-oj-ZDb">
+                                <rect key="frame" x="123" y="172" width="100" height="100"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dyu-J6-EGY"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="borderSlider" destination="E9r-FG-iPi" id="5fa-84-Mx2"/>
+                        <outlet property="colorView" destination="8Mr-Yg-Mog" id="um2-sr-1HO"/>
+                        <outlet property="imageView" destination="X28-oj-ZDb" id="eSy-k9-EiT"/>
+                        <outlet property="slider" destination="7wM-FP-UvC" id="cY6-1L-H7Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Q8-g0-iyL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1422.5" y="923.5"/>
         </scene>
     </scenes>
 </document>
