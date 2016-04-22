@@ -45,12 +45,7 @@
 - (void)pickImageViewController:(ZXYPickImageViewController *)picker didFinishPickingImage:(UIImage *)image{
     
     self.imageView.image = image;
-    _imageView.frame = CGRectMake(100, 100, 250, 250);
-    //    [UIView animateWithDuration:3 animations:^{
-    //        _imageView.frame = CGRectMake(125, 149, 100, 100);
-    //        _imageView.layer.shadowOpacity = 0.8;
-    //        _imageView.layer.shadowOffset = CGSizeMake(0, 1);
-    //    }];
+
 }
 
 /*

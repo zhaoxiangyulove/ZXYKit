@@ -83,7 +83,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="pickImageView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QZT-b5-C68">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="PickImageView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QZT-b5-C68">
                                                     <rect key="frame" x="15" y="0.0" width="325" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -94,6 +94,26 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="beX-FA-IFR" kind="push" id="pdV-fC-pp0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="3K8-MZ-kpm" style="IBUITableViewCellStyleDefault" id="GvQ-Ht-sEk">
+                                        <rect key="frame" x="0.0" y="275" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GvQ-Ht-sEk" id="44S-Bc-upW">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3K8-MZ-kpm">
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="eEc-7g-9l4" kind="push" id="DtY-AO-cXD"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -155,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DtL-2g-uFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1258.5" y="433.5"/>
+            <point key="canvasLocation" x="1355.5" y="-394.5"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="5sj-Vz-CV7">
@@ -174,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZK3-JV-2sF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1243.5" y="-282.5"/>
+            <point key="canvasLocation" x="1355.5" y="-1170.5"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="HJW-If-OeW">
@@ -193,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mC8-V2-qR2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1427.5" y="-63.5"/>
+            <point key="canvasLocation" x="1781.5" y="-1035.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bwi-R0-6aN">
@@ -267,7 +287,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Q8-g0-iyL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1422.5" y="923.5"/>
+            <point key="canvasLocation" x="1781.5" y="-288.5"/>
+        </scene>
+        <!--Animation View Controller-->
+        <scene sceneID="OnE-MG-cIQ">
+            <objects>
+                <viewController id="eEc-7g-9l4" customClass="AnimationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KU4-U3-hFV"/>
+                        <viewControllerLayoutGuide type="bottom" id="bCa-pm-tS5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oU3-fJ-JcN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tT8-sl-Prn">
+                                <rect key="frame" x="87" y="51" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Rq-pv-GXi">
+                                <rect key="frame" x="164" y="466" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="start:" destination="eEc-7g-9l4" eventType="touchUpInside" id="QmB-I0-x7J"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SMv-H2-yEZ">
+                                <rect key="frame" x="87" y="188" width="200" height="200"/>
+                                <color key="backgroundColor" red="1" green="0.3880662091" blue="0.33389329909999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85710509550000002" green="0.76873722680000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KaQ-0r-7vT"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="redView" destination="SMv-H2-yEZ" id="Vq0-cA-vba"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A67-yZ-fvn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1355.5" y="374.5"/>
         </scene>
     </scenes>
 </document>
