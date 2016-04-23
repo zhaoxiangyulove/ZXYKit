@@ -1,5 +1,6 @@
 # ZXYKit
 # 问题反馈群：70498704
+# 平均两天会出一个新框架，欢迎来群提意见，想法！
 # AnimationKit
 - 使用方法
     - 导入`ZXYAnimationKit`文件夹
