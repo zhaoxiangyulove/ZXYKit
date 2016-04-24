@@ -1,7 +1,7 @@
 # ZXYKit
 # 问题反馈群：70498704
 # 平均两天会出一个新框架，欢迎来群提意见，想法！
-# AnimationKit
+## AnimationKit
 - 使用方法
     - 导入`ZXYAnimationKit`文件夹
     - 引入`Animation.h`头文件
@@ -33,5 +33,51 @@
 //        make.duration(1);
 //        make.autoreverses(YES);
     }];
+
+ ```
+
+
+##  ZXYTabBar
+- 使用方法
+    - 导入`ZXYTabBar`文件夹
+    - 创建一个自定义TabBarController；
+    - 引入`ZXYTabBar.h`头文件，并遵守 ` <ZXYTabBarDelegate>`
+    - 使用代理方法
+
+```objc
+- (void)setUpTabBar
+{
+    ZXYTabBar *tabBar = [[ZXYTabBar alloc] init];
+    tabBar.delegate = self;
+    //设置选中背景，则有背景颜色，不设置为无
+    tabBar.selectedBackColor = [UIColor greenColor];
+    tabBar.backgroundColor = [UIColor orangeColor];
+    _bar = tabBar;
+    [self.view addSubview:tabBar];
+}
+ ```
+ - 参考代理相关代码：
+ - 选择设置某个item的size
+
+```objc
+- (CGSize)tabBar:(ZXYTabBar *)tabBar sizeForItemAtIndex:(NSInteger)index{
+//    if (index == 2) {
+//        return CGSizeMake(100,49);
+//    }
+    return CGSizeZero;
+}
+
+ ```
+  - 将item的badgeView拖拽出去消失后要做的事
+
+```objc
+-(void)tabBar:(ZXYTabBar *)tabBar didRomveItemGooView:(ZXYTabBarItem *)item{
+    item.badgeValue = 1;
+}
+ ```
+   - 点击某个item是要做的事
+
+```objc
+- (void)tabBar:(ZXYTabBar *)tabBar didClickItem:(ZXYTabBarItem *)item；
 
  ```
