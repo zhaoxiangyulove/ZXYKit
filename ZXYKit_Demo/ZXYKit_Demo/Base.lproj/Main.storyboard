@@ -116,6 +116,26 @@
                                             <segue destination="eEc-7g-9l4" kind="push" id="DtY-AO-cXD"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="TYs-D8-XjQ" style="IBUITableViewCellStyleDefault" id="SEn-Vt-hSp">
+                                        <rect key="frame" x="0.0" y="319" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SEn-Vt-hSp" id="t6l-Cz-hEt">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="TabBar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TYs-D8-XjQ">
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Hba-Ye-nPo" kind="push" id="Mex-eE-26s"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -328,6 +348,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A67-yZ-fvn" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1355.5" y="374.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="dix-EI-tcz">
+            <objects>
+                <tabBarController id="Hba-Ye-nPo" customClass="ZXYTabBarController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="urE-Zh-buB"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="J5e-NN-nDH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jpn-Bi-NNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1863" y="654"/>
         </scene>
     </scenes>
 </document>
