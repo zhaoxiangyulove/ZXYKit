@@ -88,16 +88,6 @@
     return _backColor;
 }
 
-- (UIColor *)randomColor
-{
-    
-    CGFloat r = arc4random_uniform(256) / 255.0;
-    CGFloat g = arc4random_uniform(256) / 255.0;
-    CGFloat b = arc4random_uniform(256) / 255.0;
-    
-    return [UIColor colorWithRed:r green:g blue:b alpha:1];
-}
-
 
 - (void)setBadgeValue:(NSInteger)badgeValue{
     _badgeValue = badgeValue;
@@ -122,7 +112,9 @@
 
 -(void)gooViewRemove{
     if ([_delegate respondsToSelector:@selector(tabBarItemGooViewRemove:)]) {
+        _gooView = nil;
         [_delegate tabBarItemGooViewRemove:self];
+        
     }
     
 }

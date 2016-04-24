@@ -77,6 +77,13 @@
     }
     if (_selectLayer)_selectLayer.frame = self.selectedItem.frame;
 }
+#pragma mark - ZXYTabBarItemDelegate
+
+-(void)tabBarItemGooViewRemove:(ZXYTabBarItem *)item{
+    if ([_delegate respondsToSelector:@selector(tabBar:didRomveItemGooView:)]) {
+        [_delegate tabBar:self didRomveItemGooView:item];
+    }
+}
 
 - (NSArray *)items {
     if(_items == nil) {
@@ -90,13 +97,7 @@
     return _items;
 }
 
-#pragma mark - ZXYTabBarItemDelegate
 
--(void)tabBarItemGooViewRemove:(ZXYTabBarItem *)item{
-    if ([_delegate respondsToSelector:@selector(tabBarItemGooViewRemove:)]) {
-        [_delegate tabBar:self didClickItem:item];
-    }
-}
 
 - (void)setItems:(NSArray<UITabBarItem *> *)items{
     BOOL preferSize =[_delegate respondsToSelector:@selector(tabBar:sizeForItemAtIndex:)];
@@ -105,6 +106,7 @@
         ZXYTabBarItem *item = [ZXYTabBarItem itemWithImage:items[i].image selectedImage:items[i].selectedImage];
         [array addObject:item];
         item.backgroundColor = item.backColor;
+        item.delegate = self;
         item.tag = i;
         [item setTitle:items[i].title];
         [item addTarget:self action:@selector(itemClick:) forControlEvents:UIControlEventTouchDown];

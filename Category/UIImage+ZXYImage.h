@@ -10,10 +10,12 @@
 
 @interface UIImage (ZXYImage)
 
++ (instancetype)imageNamed:(NSString *)name renderMode:(UIImageRenderingMode)render;
+
 @end
 @interface UIImage (ZXYCircleImage)
-+ (UIImage *)imageWithClipImageName:(NSString *)imageName borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)color cornerRadius:(CGFloat)radius;
-- (UIImage *)clipImageWithBorderWidth:(CGFloat)borderWidth borderColor:(UIColor *)color cornerRadius:(CGFloat)radius;
-- (UIImage *)clipImageWithFrame:(CGRect)frame scale:(CGFloat)scale;
++ (instancetype)imageWithClipImageName:(NSString *)imageName borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)color cornerRadius:(CGFloat)radius;
+- (instancetype)clipImageWithBorderWidth:(CGFloat)borderWidth borderColor:(UIColor *)color cornerRadius:(CGFloat)radius;
+- (instancetype)clipImageWithFrame:(CGRect)frame scale:(CGFloat)scale;
 - (CGRect)frameToFit;
 @end

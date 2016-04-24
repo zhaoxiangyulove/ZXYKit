@@ -12,13 +12,19 @@
 
 @implementation UIImage (ZXYImage)
 
++ (instancetype)imageNamed:(NSString *)name renderMode:(UIImageRenderingMode)render{
+    UIImage *image = [UIImage imageNamed:name];
+    image = [image imageWithRenderingMode:render];
+    return image;
+}
+
 @end
 @implementation UIImage (ZXYCircleImage)
-+ (UIImage *)imageWithClipImageName:(NSString *)imageName borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)color cornerRadius:(CGFloat)radius{
++ (instancetype)imageWithClipImageName:(NSString *)imageName borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)color cornerRadius:(CGFloat)radius{
     UIImage *image = [UIImage imageNamed:imageName];
     return [image clipImageWithBorderWidth:borderWidth borderColor:color cornerRadius:radius];
     }
-- (UIImage *)clipImageWithBorderWidth:(CGFloat)borderWidth borderColor:(UIColor *)color cornerRadius:(CGFloat)radius{
+- (instancetype)clipImageWithBorderWidth:(CGFloat)borderWidth borderColor:(UIColor *)color cornerRadius:(CGFloat)radius{
     // 获取图片宽度
     CGFloat imageBorder = self.size.width<self.size.height?self.size.width:self.size.height;
     // 设置环的宽度
@@ -44,7 +50,7 @@
     UIGraphicsEndImageContext();
     return clipImage;
 }
-- (UIImage *)clipImageWithFrame:(CGRect)frame scale:(CGFloat)scale{
+- (instancetype)clipImageWithFrame:(CGRect)frame scale:(CGFloat)scale{
 
     //算出截图的实际size
     

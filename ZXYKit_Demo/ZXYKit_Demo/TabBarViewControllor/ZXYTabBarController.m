@@ -57,7 +57,7 @@
     
 }
 -(void)tabBar:(ZXYTabBar *)tabBar didRomveItemGooView:(ZXYTabBarItem *)item{
-    item.badgeValue = 0;
+    item.badgeValue = 1;
 }
 
 
