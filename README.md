@@ -38,7 +38,7 @@
 
 
 ##  ZXYTabBar
-- 效果图
+- 效果图 <br/>
 ![Smaller icon](http://g.hiphotos.baidu.com/image/pic/item/7dd98d1001e939014793b7be7cec54e737d19698.jpg)
 
 - 使用方法
