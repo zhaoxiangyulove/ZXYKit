@@ -136,6 +136,26 @@
                                             <segue destination="Hba-Ye-nPo" kind="push" id="Mex-eE-26s"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="3ll-bw-J0q" style="IBUITableViewCellStyleDefault" id="Gks-DC-vJu">
+                                        <rect key="frame" x="0.0" y="363" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gks-DC-vJu" id="Ubr-Ib-Mou">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="GooView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3ll-bw-J0q">
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="KhT-nN-aED" kind="push" id="qm7-yX-KXi"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -349,6 +369,33 @@
             </objects>
             <point key="canvasLocation" x="1355.5" y="374.5"/>
         </scene>
+        <!--Goo View Controller-->
+        <scene sceneID="JwC-KW-Qzz">
+            <objects>
+                <viewController id="KhT-nN-aED" customClass="GooViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cj6-bH-rgU"/>
+                        <viewControllerLayoutGuide type="bottom" id="J7S-9i-OXB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ixt-pU-hGQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrJ-oh-m1d" customClass="ZXYGooView">
+                                <rect key="frame" x="159" y="282" width="57" height="28"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tIp-EV-4Qe"/>
+                    <connections>
+                        <outlet property="gooView" destination="jrJ-oh-m1d" id="Q8Y-eV-Dzm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qsX-ap-1yp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1355.5" y="1111.5"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dix-EI-tcz">
             <objects>
@@ -362,7 +409,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jpn-Bi-NNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1863" y="654"/>
+            <point key="canvasLocation" x="1781.5" y="461.5"/>
         </scene>
     </scenes>
 </document>

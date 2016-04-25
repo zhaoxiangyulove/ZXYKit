@@ -35,8 +35,8 @@
     
     self.imageView.contentMode = UIViewContentModeCenter;
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-
+    [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    self.titleLabel.font = [UIFont systemFontOfSize:8];
 }
 
 -(void)layoutSubviews{
@@ -59,8 +59,6 @@
 }
 - (void)setTitle:(NSString *)title{
     [self setTitle:title forState:UIControlStateNormal];
-//    [self setTitle:title forState:UIControlStateHighlighted];
-//    [self setTitle:title forState:UIControlStateSelected];
 }
 - (void)setImage:(UIImage *)image selectedImage:(UIImage *)selectedImage{
     [self setImage:image forState:UIControlStateNormal];
@@ -92,7 +90,7 @@
 - (void)setBadgeValue:(NSInteger)badgeValue{
     _badgeValue = badgeValue;
     if (badgeValue != 0) {
-        self.gooView.hidden = NO;
+        self.gooView.badgeValue = _badgeValue;
     }
 }
 
@@ -100,23 +98,19 @@
 
 - (ZXYGooView *)gooView {
 	if(_gooView == nil) {
-		ZXYGooView *gooView = [ZXYGooView gooViewWithBadgeValue:_badgeValue];
+		ZXYGooView *gooView = [[ZXYGooView alloc] init];
         gooView.delegate = self;
         [self addSubview:gooView];
         _gooView = gooView;
-        
-        
-	}
+    }
 	return _gooView;
 }
 
 -(void)gooViewRemove{
+    _gooView = nil;
     if ([_delegate respondsToSelector:@selector(tabBarItemGooViewRemove:)]) {
-        _gooView = nil;
         [_delegate tabBarItemGooViewRemove:self];
-        
     }
-    
 }
 
 @end

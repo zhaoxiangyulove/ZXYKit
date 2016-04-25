@@ -53,11 +53,8 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    
-    
     NSUInteger count = self.items.count;
 
- 
     CGFloat x = 0;
     CGFloat y = 0;
     CGFloat w = remainderWidth / (count - customItemCount);

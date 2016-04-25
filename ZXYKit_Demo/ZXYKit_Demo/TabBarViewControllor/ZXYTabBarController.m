@@ -70,31 +70,31 @@
 // tabBar上面按钮的图片尺寸是由规定，不能超过44
 - (void)setUpAllChildViewController
 {
-    // 购彩大厅
+    // message
     UIViewController *hall = [[UIViewController alloc] init];
     
-    [self setUpOneChildViewController:hall image:[UIImage imageNamed:@"TabBar_LotteryHall_new"] selImage:[UIImage imageNamed:@"TabBar_LotteryHall_selected_new"] title:@"购彩大厅"];
+    [self setUpOneChildViewController:hall image:[UIImage imageNamed:@"tabbar_icon_messag"] selImage:[UIImage imageNamed:@"tabbar_icon_messag_press"] title:@"message"];
     
     
-    // 竞技场
+    // contacts
     UIViewController *arena = [[UIViewController alloc] init];
     
-    [self setUpOneChildViewController:arena image:[UIImage imageNamed:@"TabBar_Arena_new"] selImage:[UIImage imageNamed:@"TabBar_Arena_selected_new"] title:nil];
+    [self setUpOneChildViewController:arena image:[UIImage imageNamed:@"tabbar_icon_contacts"] selImage:[UIImage imageNamed:@"tabbar_icon_contacts_press"] title:@"contacts"];
     
     arena.view.backgroundColor = [UIColor purpleColor];
     
     
-    // 发现
+    // location
     UIViewController *discover = [[UIViewController alloc] init];
-    [self setUpOneChildViewController:discover image:[UIImage imageNamed:@"TabBar_Discovery_new"] selImage:[UIImage imageNamed:@"TabBar_Discovery_selected_new"] title:@"发现"];
+    [self setUpOneChildViewController:discover image:[UIImage imageNamed:@"tabbar_icon_side"] selImage:[UIImage imageNamed:@"tabbar_icon_side_press"] title:@"location"];
     
-    // 开奖信息
+    // setting
     UIViewController *history = [[UIViewController alloc] init];
-    [self setUpOneChildViewController:history image:[UIImage imageNamed:@"TabBar_History_new"] selImage:[UIImage imageNamed:@"TabBar_History_selected_new"] title:@"开奖信息"];
+    [self setUpOneChildViewController:history image:[UIImage imageNamed:@"tabbar_icon_friend"] selImage:[UIImage imageNamed:@"tabbar_icon_friend_press"] title:@"setting"];
     
-    // 我的彩票
+    // more
     UIViewController *myLottery = [[UIViewController alloc] init];
-    [self setUpOneChildViewController:myLottery image:[UIImage imageNamed:@"TabBar_MyLottery_new"] selImage:[UIImage imageNamed:@"TabBar_MyLottery_selected_new"] title:@"我的彩票"];
+    [self setUpOneChildViewController:myLottery image:[UIImage imageNamed:@"tabbar_icon_more"] selImage:[UIImage imageNamed:@"tabbar_icon_more_press"] title:@"more"];
 
 }
 
@@ -102,7 +102,7 @@
 - (void)setUpOneChildViewController:(UIViewController *)vc image:(UIImage *)image selImage:(UIImage *)selImage title:(NSString *)title
 {
     
-    vc.navigationItem.title = title;
+    vc.title = title;
     
     // 描述对应按钮的内容
     vc.tabBarItem.image = image;
