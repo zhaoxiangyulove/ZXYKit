@@ -32,7 +32,6 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)start:(UIButton *)sender {
-    
     [_redView.layer makeAnimations:^(ZXYAnimationMaker *make) {
 //        make.position.from(CGPointMake(100, 100)).to(CGPointMake(arc4random_uniform(200), arc4random_uniform(200)));
 //        make.rotationY.from(0.3).to(M_PI);
@@ -51,6 +50,8 @@
 //        make.opacity.to(0);
 
 //        make.backcolor.to([UIColor lightGrayColor].CGColor);
+    } completion:^(BOOL finished) {
+        NSLog(@"complete");
     }];
     
     

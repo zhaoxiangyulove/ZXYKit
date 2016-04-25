@@ -43,5 +43,5 @@
 - (ZXYAnimationMaker * (^)(float duration))duration;
 - (ZXYAnimationMaker * (^)(BOOL autoreverses))autoreverses;
 - (instancetype)initWithLayer:(CALayer *)layer;
-- (void)install;
+- (void)installWithCompletion:(void (^)(BOOL finished))completion;
 @end

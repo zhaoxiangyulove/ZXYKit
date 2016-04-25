@@ -8,32 +8,35 @@
     - 使用layer的实例方法
 
 ```objc
-- (void)makeAnimations:(void(^)(ZXYAnimationMaker *make))block;
- ```
+- (void)makeAnimations:(void (^)(ZXYAnimationMaker *))block completion:(void (^)(BOOL finished))completion;
+```
+
  - 参考代码
 
 ```objc
-    [someLayer makeAnimations:^(ZXYAnimationMaker *make) {
+
+      [_redView.layer makeAnimations:^(ZXYAnimationMaker *make) {
 //        make.position.from(CGPointMake(100, 100)).to(CGPointMake(arc4random_uniform(200), arc4random_uniform(200)));
 //        make.rotationY.from(0.3).to(M_PI);
 //        make.rotation.to(M_PI_2);
+        make.repeatCount(3);
+        make.duration(1);
+        make.autoreverses(YES);
 //        make.rotationX.values(@[@(M_PI_4),@(M_PI_2),@(M_PI_4 *3)]);
 //        make.bounds.to(CGRectMake(0, 0, 200, 200));
 //        make.scale.to(0.5);
 //        make.hidden.to(YES);
 //        make.submakeScale.to(0.5);
-//        make.translationX.to(100);
+        make.translationX.to(100);
 //        make.borderColor.to([UIColor lightGrayColor].CGColor);
 //        make.borderWidth.to(20);
 //        make.opacity.to(0);
 
 //        make.backcolor.to([UIColor lightGrayColor].CGColor);
-
-//        make.repeatCount(3);
-//        make.duration(1);
-//        make.autoreverses(YES);
+    } completion:^(BOOL finished) {
+        NSLog(@"complete");
     }];
-
+    
  ```
 
 
