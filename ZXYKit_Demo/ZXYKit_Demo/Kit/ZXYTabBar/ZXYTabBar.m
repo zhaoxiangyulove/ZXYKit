@@ -44,15 +44,23 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [_delegate.tabBar removeFromSuperview];
-        self.frame = _delegate.tabBar.frame;
+        
     }
     return self;
 }
 #pragma mark - 布局
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+    if (_delegate.tabBar.subviews.count > 1) {
+        for (UIView *childView in _delegate.tabBar.subviews) {
+            if (![childView isKindOfClass:[ZXYTabBar class]]) {
+                [childView removeFromSuperview];
+            }
+        }
+    }
+    
     NSUInteger count = self.items.count;
 
     CGFloat x = 0;
@@ -155,8 +163,8 @@
 
 - (void)setDelegate:(UITabBarController<ZXYTabBarDelegate> *)delegate{
     _delegate = delegate;
-    [delegate.tabBar removeFromSuperview];
-    self.frame = delegate.tabBar.frame;
+    self.frame = delegate.tabBar.bounds;
+    [_delegate.tabBar addSubview: self];
 }
 
 - (void)setSelectedBackColor:(UIColor *)selectedBackColor{

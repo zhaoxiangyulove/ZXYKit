@@ -8,6 +8,7 @@
 
 #import "ZXYTabBarController.h"
 #import "ZXYTabBar.h"
+#import "PickImageViewController.h"
 
 @interface ZXYTabBarController ()<ZXYTabBarDelegate>
 /** <#注释#> */
@@ -39,7 +40,7 @@
     tabBar.backgroundColor = [UIColor orangeColor];
     _bar = tabBar;
     
-    [self.view addSubview:tabBar];
+//    [self.view addSubview:tabBar];
     
     
 }
