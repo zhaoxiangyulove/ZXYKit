@@ -38,6 +38,9 @@
 
 
 ##  ZXYTabBar
+- 效果图
+![Smaller icon](http://g.hiphotos.baidu.com/image/pic/item/7dd98d1001e939014793b7be7cec54e737d19698.jpg)
+
 - 使用方法
     - 导入`ZXYTabBar`文件夹
     - 创建一个自定义TabBarController；
