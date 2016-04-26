@@ -38,6 +38,7 @@
 @property (nonatomic, strong, readonly) ZXYAnimation *borderWidth;
 @property (nonatomic, strong, readonly) ZXYAnimation *borderColor;
 @property (nonatomic, strong, readonly) ZXYAnimation *opacity;
+@property (nonatomic, strong, readonly) ZXYAnimation *strokeEnd;
 
 - (ZXYAnimationMaker * (^)(float count))repeatCount;
 - (ZXYAnimationMaker * (^)(float duration))duration;

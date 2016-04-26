@@ -104,6 +104,9 @@ typedef  void (^Completion)(BOOL finished);
 - (ZXYAnimation *)opacity{
     return [self addBasicAnimationWithKeyPath:@"opacity"];
 }
+- (ZXYAnimation *)strokeEnd{
+    return [self addBasicAnimationWithKeyPath:@"strokeEnd"];
+}
 
 - (ZXYAnimation *)addBasicAnimationWithKeyPath:(NSString *)keyPath {
     ZXYKeyframeAnimation *layerAttribute = [[ZXYKeyframeAnimation alloc] initWithLayer:self.layer KeyPath:keyPath];
@@ -147,9 +150,7 @@ typedef  void (^Completion)(BOOL finished);
     _completion = completion;
     [self.layer addAnimation:group forKey:nil];
 }
-- (void)animationDidStart:(CAAnimation *)anim{
-    NSLog(@"%s",__func__);
-}
+
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     if (flag) {
         _completion(flag);
