@@ -17,6 +17,8 @@
 @interface ZXYMenuViewController ()
 /** 视图 */
 @property (nonatomic, weak) ZXYMenuView *menuView;
+/** currentBackVC */
+@property (nonatomic, weak) UIViewController *currentBackVC;
 @end
 
 @implementation ZXYMenuViewController
@@ -24,29 +26,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.menuView.hidden = NO;
-    // Do any additional setup after loading the view.
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
+    [_menuView.mainView addGestureRecognizer:tap];
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+    [self.view addGestureRecognizer:pan];
 }
 
 #pragma mark - pan手势
 
 - (void)pan:(UIPanGestureRecognizer *)pan
 {
-    // 获取手势位置
+    _currentBackVC = _menuView.mainView.frame.origin.x > 0?_leftVC:_rightVC;
     CGPoint transP = [pan translationInView:self.view];
-    // 获取X轴偏移量
     CGFloat offsetX = transP.x;
     // 修改mainV的Frame
-    if (_leftVC && offsetX > 0){
+    if (_leftVC && _menuView.mainView.frame.origin.x >= 0){
         _menuView.mainView.frame = [self frameWithOffsetX:offsetX];
+        [_menuView.leftView addSubview:_leftVC.view];
     }
-    if (_rightVC && offsetX < 0){
+    if (_rightVC && _menuView.mainView.frame.origin.x <= 0){
         _menuView.mainView.frame = [self frameWithOffsetX:offsetX];
+        [_menuView.rightView addSubview:_rightVC.view];
     }
     // 复位
     [pan setTranslation:CGPointZero inView:self.view];
-    // 判断下当手势结束的时候，定位
+    // 判断下当手势结束的时候位置
     if (pan.state == UIGestureRecognizerStateEnded) {
-        // 定位
         CGFloat target = 0;
         if (_menuView.mainView.frame.origin.x > screenW * 0.4) {
             target = kTargetR;
@@ -56,10 +61,29 @@
         // 获取x轴偏移量
         CGFloat offsetX = target - _menuView.mainView.frame.origin.x;
         [UIView animateWithDuration:0.25 animations:^{
-            _menuView.mainView.frame = target == 0?self.view.bounds:[self frameWithOffsetX:offsetX];
+            if (target == 0) {
+                _menuView.mainView.frame = self.view.bounds;
+            }else{
+                _menuView.mainView.frame =[self frameWithOffsetX:offsetX];
+            }
+        } completion:^(BOOL finished) {
+            if (target == 0)[_currentBackVC.view removeFromSuperview];
         }];
     }
     
+}
+#pragma mark - tap手势
+
+- (void)tap
+{
+    // 还原
+    if (_menuView.mainView.frame.origin.x != 0) {
+        [UIView animateWithDuration:0.25 animations:^{
+            _menuView.mainView.frame = self.view.bounds;
+        }completion:^(BOOL finished) {
+            [_currentBackVC.view removeFromSuperview];
+        }];
+    }
 }
 /**
  *  根据offsetX计算mainView的Frame
@@ -70,17 +94,12 @@
  */
 - (CGRect)frameWithOffsetX:(CGFloat)offsetX
 {
-    // 获取上一次frame
     CGRect frame = _menuView.mainView.frame;
-    // X轴每平移一点，Y轴需要移动
     CGFloat offsetY = offsetX * kMaxY / screenW;
-    // 获取上一次的高度
     CGFloat preH = frame.size.height;
-    // 获取上一次的宽度
     CGFloat preW = frame.size.width;
-    // 获取当前的高度
     CGFloat curH = preH - 2 * offsetY;
-    if (frame.origin.x < 0) { // 往左移动
+    if (frame.origin.x < 0) {
         curH = preH + 2 * offsetY;
     }
     // 获取尺寸的缩放比例
@@ -95,17 +114,7 @@
     return frame;
 }
 
-#pragma mark - tap手势
 
-- (void)tap
-{
-    // 还原
-    if (_menuView.mainView.frame.origin.x != 0) {
-        [UIView animateWithDuration:0.25 animations:^{
-            _menuView.mainView.frame = self.view.bounds;
-        }];
-    }
-}
 
 #pragma mark - set方法
 
@@ -114,26 +123,16 @@
     _mainVC = mainVC;
     mainVC.view.frame = _menuView.mainView.frame;
     [_menuView.mainView addSubview:mainVC.view];
-    // 添加点按手势
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
-    [_menuView.mainView addGestureRecognizer:tap];
-    
 }
 - (void)setLeftVC:(UIViewController *)leftVC{
     [self addChildViewController:leftVC];
     _leftVC = leftVC;
     leftVC.view.frame = _menuView.leftView.frame;
-    [_menuView.leftView addSubview:leftVC.view];
-    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
-    [self.view addGestureRecognizer:pan];
 }
 - (void)setRightVC:(UIViewController *)rightVC{
     [self addChildViewController:rightVC];
     _rightVC = rightVC;
     rightVC.view.frame = _menuView.rightView.frame;
-    [_menuView.rightView addSubview:rightVC.view];
-    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
-    [self.view addGestureRecognizer:pan];
 }
 - (void)setBackColor:(UIColor *)backColor{
     _backColor = backColor;
