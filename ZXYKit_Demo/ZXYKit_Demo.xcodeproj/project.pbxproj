@@ -24,10 +24,10 @@
 		EC30ACC61CCD26FE005BD274 /* ZXYTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EC30ACC31CCD26FE005BD274 /* ZXYTabBarItem.m */; };
 		EC30ACCA1CCD27D7005BD274 /* ZXYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC30ACC91CCD27D7005BD274 /* ZXYTabBarController.m */; };
 		EC30ACD21CCDB282005BD274 /* GooViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC30ACD11CCDB282005BD274 /* GooViewController.m */; };
+		EC30ADA81CD06905005BD274 /* ZXYGraphModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC30ADA51CD06905005BD274 /* ZXYGraphModel.m */; };
+		EC30ADA91CD06905005BD274 /* ZXYGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC30ADA71CD06905005BD274 /* ZXYGraphView.m */; };
 		EC3531F61CBBB47E006D0F50 /* ZXYPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3531F51CBBB47E006D0F50 /* ZXYPageView.m */; };
 		EC3531F91CBBB794006D0F50 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3531F81CBBB794006D0F50 /* PageViewController.m */; };
-		EC435CAE1CC5221B005254FA /* ZXYGraphModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC435CAB1CC5221B005254FA /* ZXYGraphModel.m */; };
-		EC435CAF1CC5221B005254FA /* ZXYGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC435CAD1CC5221B005254FA /* ZXYGraphView.m */; };
 		EC4CCCEA1CC3D0D500BD08E4 /* ZXYMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4CCCE71CC3D0D500BD08E4 /* ZXYMenuView.m */; };
 		EC4CCCEB1CC3D0D500BD08E4 /* ZXYMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4CCCE91CC3D0D500BD08E4 /* ZXYMenuViewController.m */; };
 		EC4CCCEF1CC3D25500BD08E4 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4CCCEE1CC3D25500BD08E4 /* MenuViewController.m */; };
@@ -70,14 +70,14 @@
 		EC30ACC91CCD27D7005BD274 /* ZXYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYTabBarController.m; sourceTree = "<group>"; };
 		EC30ACD01CCDB282005BD274 /* GooViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooViewController.h; sourceTree = "<group>"; };
 		EC30ACD11CCDB282005BD274 /* GooViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooViewController.m; sourceTree = "<group>"; };
+		EC30ADA41CD06905005BD274 /* ZXYGraphModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYGraphModel.h; sourceTree = "<group>"; };
+		EC30ADA51CD06905005BD274 /* ZXYGraphModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYGraphModel.m; sourceTree = "<group>"; };
+		EC30ADA61CD06905005BD274 /* ZXYGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYGraphView.h; sourceTree = "<group>"; };
+		EC30ADA71CD06905005BD274 /* ZXYGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYGraphView.m; sourceTree = "<group>"; };
 		EC3531F41CBBB47E006D0F50 /* ZXYPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYPageView.h; sourceTree = "<group>"; };
 		EC3531F51CBBB47E006D0F50 /* ZXYPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYPageView.m; sourceTree = "<group>"; };
 		EC3531F71CBBB794006D0F50 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		EC3531F81CBBB794006D0F50 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
-		EC435CAA1CC5221B005254FA /* ZXYGraphModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYGraphModel.h; sourceTree = "<group>"; };
-		EC435CAB1CC5221B005254FA /* ZXYGraphModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYGraphModel.m; sourceTree = "<group>"; };
-		EC435CAC1CC5221B005254FA /* ZXYGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYGraphView.h; sourceTree = "<group>"; };
-		EC435CAD1CC5221B005254FA /* ZXYGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYGraphView.m; sourceTree = "<group>"; };
 		EC4CCCE61CC3D0D500BD08E4 /* ZXYMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYMenuView.h; sourceTree = "<group>"; };
 		EC4CCCE71CC3D0D500BD08E4 /* ZXYMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYMenuView.m; sourceTree = "<group>"; };
 		EC4CCCE81CC3D0D500BD08E4 /* ZXYMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYMenuViewController.h; sourceTree = "<group>"; };
@@ -223,13 +223,24 @@
 			path = GooViewController;
 			sourceTree = "<group>";
 		};
+		EC30ADA31CD06905005BD274 /* ZXYGraph */ = {
+			isa = PBXGroup;
+			children = (
+				EC30ADA41CD06905005BD274 /* ZXYGraphModel.h */,
+				EC30ADA51CD06905005BD274 /* ZXYGraphModel.m */,
+				EC30ADA61CD06905005BD274 /* ZXYGraphView.h */,
+				EC30ADA71CD06905005BD274 /* ZXYGraphView.m */,
+			);
+			path = ZXYGraph;
+			sourceTree = "<group>";
+		};
 		EC3531F21CBBB47E006D0F50 /* Kit */ = {
 			isa = PBXGroup;
 			children = (
+				EC30ADA31CD06905005BD274 /* ZXYGraph */,
 				EC30ACBD1CCD26FE005BD274 /* ZXYTabBar */,
 				ECECDC641CC9FA7400FC8F34 /* ZXYAnimationKit */,
 				EC0AA2AE1CC7B13500CACA44 /* ZXYPickImageViewController */,
-				EC435CA91CC5221B005254FA /* ZXYGraph */,
 				EC4CCCE51CC3D0D500BD08E4 /* ZXYMenuView */,
 				EC3531F31CBBB47E006D0F50 /* PageView */,
 			);
@@ -244,18 +255,6 @@
 				EC3531F51CBBB47E006D0F50 /* ZXYPageView.m */,
 			);
 			path = PageView;
-			sourceTree = "<group>";
-		};
-		EC435CA91CC5221B005254FA /* ZXYGraph */ = {
-			isa = PBXGroup;
-			children = (
-				EC435CAA1CC5221B005254FA /* ZXYGraphModel.h */,
-				EC435CAB1CC5221B005254FA /* ZXYGraphModel.m */,
-				EC435CAC1CC5221B005254FA /* ZXYGraphView.h */,
-				EC435CAD1CC5221B005254FA /* ZXYGraphView.m */,
-			);
-			name = ZXYGraph;
-			path = ZXYMenuView/ZXYGraph;
 			sourceTree = "<group>";
 		};
 		EC4CCCE51CC3D0D500BD08E4 /* ZXYMenuView */ = {
@@ -386,16 +385,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC435CAF1CC5221B005254FA /* ZXYGraphView.m in Sources */,
 				EC0AA2AC1CC7B08300CACA44 /* UIColor+ZXYColor.m in Sources */,
 				ECECDC721CC9FA7400FC8F34 /* ZXYKeyframeAnimation.m in Sources */,
-				EC435CAE1CC5221B005254FA /* ZXYGraphModel.m in Sources */,
 				EC0AA2B71CC7B13500CACA44 /* ZXYPickImageViewController.m in Sources */,
 				852B87F71C4F936E00D9479A /* AppDelegate.m in Sources */,
 				EC0AA2AD1CC7B08300CACA44 /* UIImage+ZXYImage.m in Sources */,
 				ECECDC7A1CC9FBC200FC8F34 /* AnimationViewController.m in Sources */,
 				852B87F41C4F936E00D9479A /* main.m in Sources */,
 				ECECDC6F1CC9FA7400FC8F34 /* CALayer+ZXYAnimation.m in Sources */,
+				EC30ADA91CD06905005BD274 /* ZXYGraphView.m in Sources */,
+				EC30ADA81CD06905005BD274 /* ZXYGraphModel.m in Sources */,
 				EC30ACC61CCD26FE005BD274 /* ZXYTabBarItem.m in Sources */,
 				EC30ACC41CCD26FE005BD274 /* ZXYGooView.m in Sources */,
 				EC3531F61CBBB47E006D0F50 /* ZXYPageView.m in Sources */,
