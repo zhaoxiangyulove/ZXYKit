@@ -12,10 +12,11 @@
 
 @implementation CALayer (ZXYAnimation)
 
-- (void)makeAnimations:(void (^)(ZXYAnimationMaker *))block{
+- (void)makeAnimations:(void (^)(ZXYAnimationMaker *))block completion:(void (^)(BOOL finished))completion{
     ZXYAnimationMaker *animationMaker = [[ZXYAnimationMaker alloc] initWithLayer:self];
     block(animationMaker);
-    [animationMaker install];
+    [animationMaker installWithCompletion:completion];
+
 }
 
 @end

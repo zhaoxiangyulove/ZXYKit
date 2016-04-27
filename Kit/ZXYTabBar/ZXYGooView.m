@@ -63,9 +63,9 @@
         self.layer.cornerRadius = h / 2;
         self.smallCircleLayer.cornerRadius = h / 2;
     }
-    
 }
 
+#pragma mark - 移动手势
 
 - (void)pan:(UIPanGestureRecognizer *)pan
 {
@@ -75,9 +75,6 @@
     center.y += transP.y;
     self.center = center;
     [pan setTranslation:CGPointZero inView:self];
-    
-    
-    
     
     CGFloat d = [self distanceFromBigCircleCenter:self.center smallCircleCenter:_smallCircleLayer.position];
     
@@ -132,7 +129,14 @@
 
  }
 
-// 计算两个圆心之间的距离
+/**
+ *  两圆圆心距离
+ *
+ *  @param bigCircleCenter   bigCircleCenter
+ *  @param smallCircleCenter smallCircleCenter
+ *
+ *  @return distance
+ */
 - (CGFloat)distanceFromBigCircleCenter:(CGPoint)bigCircleCenter smallCircleCenter:(CGPoint)smallCircleCenter
 {
     CGFloat offsetX = bigCircleCenter.x - smallCircleCenter.x;
@@ -140,7 +144,14 @@
     return  sqrt(offsetX * offsetX + offsetY * offsetY);
 }
 
-// 描述两圆之间一条矩形路径
+/**
+ *  描绘路径
+ *
+ *  @param bigCirCleView    bigCirCleView
+ *  @param smallCirCleLayer smallCirCleLayer
+ *
+ *  @return path
+ */
 - (UIBezierPath *)pathWithBigCirCleView:(UIView *)bigCirCleView  smallCirCleLayer:(CALayer *)smallCirCleLayer
 {
     
@@ -154,12 +165,11 @@
     CGFloat y1 = smallCenter.y;
     CGFloat r1 = smallCirCleLayer.bounds.size.height / 2;
     
-    
-    
     // 获取圆心距离
     CGFloat d = [self distanceFromBigCircleCenter:bigCenter smallCircleCenter:smallCenter];
     CGFloat sinθ = (x2 - x1) / d;
     CGFloat cosθ = (y2 - y1) / d;
+    
     // 坐标系基于父控件
     CGPoint pointA = CGPointMake(x1 - r1 * cosθ , y1 + r1 * sinθ);
     CGPoint pointB = CGPointMake(x1 + r1 * cosθ , y1 - r1 * sinθ);
@@ -183,20 +193,20 @@
     return path;
     
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+
+#pragma mark - set方法
+
 - (void)setBadgeValue:(NSInteger)badgeValue{
     _badgeValue = badgeValue;
     
     NSString *title = badgeValue > 99 ?@"99+" : [NSString stringWithFormat:@"%ld",badgeValue] ;
     [self setTitle:title forState:UIControlStateNormal];
-//    self.smallCircleLayer.hidden = NO;
     
+}
+
+- (void)setTitleFont:(UIFont *)titleFont{
+    _titleFont = titleFont;
+    self.titleLabel.font = [UIFont systemFontOfSize:8];
 }
 
 #pragma mark -  懒加载

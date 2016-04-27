@@ -10,6 +10,8 @@
 #import "ZXYKeyframeAnimation.h"
 #import "ZXYAnimation.h"
 
+typedef  void (^Completion)(BOOL finished);
+
 @interface ZXYAnimationMaker ()<ZXYAnimationDelegate>
 {
     float counts;
@@ -22,6 +24,7 @@
 @property (nonatomic, weak) CALayer *layer;
 /** 动画数组 */
 @property (nonatomic, strong) NSMutableArray *animations;
+@property (nonatomic, copy) Completion completion;
 
 @end
 
@@ -101,6 +104,9 @@
 - (ZXYAnimation *)opacity{
     return [self addBasicAnimationWithKeyPath:@"opacity"];
 }
+- (ZXYAnimation *)strokeEnd{
+    return [self addBasicAnimationWithKeyPath:@"strokeEnd"];
+}
 
 - (ZXYAnimation *)addBasicAnimationWithKeyPath:(NSString *)keyPath {
     ZXYKeyframeAnimation *layerAttribute = [[ZXYKeyframeAnimation alloc] initWithLayer:self.layer KeyPath:keyPath];
@@ -130,7 +136,7 @@
     };
 }
 
-- (void)install {
+- (void)installWithCompletion:(void (^)(BOOL finished))completion {
     CAAnimationGroup *group = [CAAnimationGroup animation];
     group.animations = self.animations;
     group.repeatCount = counts;
@@ -140,8 +146,14 @@
     group.fillMode = kCAFillModeForwards;
     group.autoreverses = reverses;
     group.duration = time;
-    NSLog(@"%@",self.layer);
+    group.delegate = self;
+    _completion = completion;
     [self.layer addAnimation:group forKey:nil];
 }
 
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    if (flag) {
+        _completion(flag);
+    }
+}
 @end

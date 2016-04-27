@@ -44,20 +44,25 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [_delegate.tabBar removeFromSuperview];
-        self.frame = _delegate.tabBar.frame;
+        
     }
     return self;
 }
 #pragma mark - 布局
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    
+    if (_delegate.tabBar.subviews.count > 1) {
+        for (UIView *childView in _delegate.tabBar.subviews) {
+            if (![childView isKindOfClass:[ZXYTabBar class]]) {
+                [childView removeFromSuperview];
+            }
+        }
+    }
     
     NSUInteger count = self.items.count;
 
- 
     CGFloat x = 0;
     CGFloat y = 0;
     CGFloat w = remainderWidth / (count - customItemCount);
@@ -77,6 +82,13 @@
     }
     if (_selectLayer)_selectLayer.frame = self.selectedItem.frame;
 }
+#pragma mark - ZXYTabBarItemDelegate
+
+-(void)tabBarItemGooViewRemove:(ZXYTabBarItem *)item{
+    if ([_delegate respondsToSelector:@selector(tabBar:didRomveItemGooView:)]) {
+        [_delegate tabBar:self didRomveItemGooView:item];
+    }
+}
 
 - (NSArray *)items {
     if(_items == nil) {
@@ -90,13 +102,7 @@
     return _items;
 }
 
-#pragma mark - ZXYTabBarItemDelegate
 
--(void)tabBarItemGooViewRemove:(ZXYTabBarItem *)item{
-    if ([_delegate respondsToSelector:@selector(tabBarItemGooViewRemove:)]) {
-        [_delegate tabBar:self didClickItem:item];
-    }
-}
 
 - (void)setItems:(NSArray<UITabBarItem *> *)items{
     BOOL preferSize =[_delegate respondsToSelector:@selector(tabBar:sizeForItemAtIndex:)];
@@ -105,6 +111,7 @@
         ZXYTabBarItem *item = [ZXYTabBarItem itemWithImage:items[i].image selectedImage:items[i].selectedImage];
         [array addObject:item];
         item.backgroundColor = item.backColor;
+        item.delegate = self;
         item.tag = i;
         [item setTitle:items[i].title];
         [item addTarget:self action:@selector(itemClick:) forControlEvents:UIControlEventTouchDown];
@@ -156,8 +163,8 @@
 
 - (void)setDelegate:(UITabBarController<ZXYTabBarDelegate> *)delegate{
     _delegate = delegate;
-    [delegate.tabBar removeFromSuperview];
-    self.frame = delegate.tabBar.frame;
+    self.frame = delegate.tabBar.bounds;
+    [_delegate.tabBar addSubview: self];
 }
 
 - (void)setSelectedBackColor:(UIColor *)selectedBackColor{

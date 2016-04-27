@@ -19,6 +19,12 @@
 		EC0AA2B71CC7B13500CACA44 /* ZXYPickImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0AA2B31CC7B13500CACA44 /* ZXYPickImageViewController.m */; };
 		EC0AA2B81CC7B13500CACA44 /* ZXYsave.png in Resources */ = {isa = PBXBuildFile; fileRef = EC0AA2B41CC7B13500CACA44 /* ZXYsave.png */; };
 		EC0AA2BC1CC7B1A300CACA44 /* PickImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0AA2BB1CC7B1A300CACA44 /* PickImageViewController.m */; };
+		EC1096981CD101F5006A8484 /* ZXYHorizontalNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC1096921CD101F5006A8484 /* ZXYHorizontalNavBar.xib */; };
+		EC1096991CD101F5006A8484 /* ZXYNavBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1096941CD101F5006A8484 /* ZXYNavBarItem.m */; };
+		EC10969A1CD101F5006A8484 /* ZXYNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1096961CD101F5006A8484 /* ZXYNavBarView.m */; };
+		EC10969B1CD101F5006A8484 /* ZXYVerticalNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC1096971CD101F5006A8484 /* ZXYVerticalNavBar.xib */; };
+		EC10969F1CD10285006A8484 /* NavBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC10969E1CD10285006A8484 /* NavBarViewController.m */; };
+		EC1096A21CD102CA006A8484 /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1096A11CD102CA006A8484 /* TestTableViewController.m */; };
 		EC30ACC41CCD26FE005BD274 /* ZXYGooView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC30ACBF1CCD26FE005BD274 /* ZXYGooView.m */; };
 		EC30ACC51CCD26FE005BD274 /* ZXYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EC30ACC11CCD26FE005BD274 /* ZXYTabBar.m */; };
 		EC30ACC61CCD26FE005BD274 /* ZXYTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EC30ACC31CCD26FE005BD274 /* ZXYTabBarItem.m */; };
@@ -60,6 +66,16 @@
 		EC0AA2B41CC7B13500CACA44 /* ZXYsave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZXYsave.png; sourceTree = "<group>"; };
 		EC0AA2BA1CC7B1A300CACA44 /* PickImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickImageViewController.h; sourceTree = "<group>"; };
 		EC0AA2BB1CC7B1A300CACA44 /* PickImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickImageViewController.m; sourceTree = "<group>"; };
+		EC1096921CD101F5006A8484 /* ZXYHorizontalNavBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZXYHorizontalNavBar.xib; sourceTree = "<group>"; };
+		EC1096931CD101F5006A8484 /* ZXYNavBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYNavBarItem.h; sourceTree = "<group>"; };
+		EC1096941CD101F5006A8484 /* ZXYNavBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYNavBarItem.m; sourceTree = "<group>"; };
+		EC1096951CD101F5006A8484 /* ZXYNavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYNavBarView.h; sourceTree = "<group>"; };
+		EC1096961CD101F5006A8484 /* ZXYNavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYNavBarView.m; sourceTree = "<group>"; };
+		EC1096971CD101F5006A8484 /* ZXYVerticalNavBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZXYVerticalNavBar.xib; sourceTree = "<group>"; };
+		EC10969D1CD10285006A8484 /* NavBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavBarViewController.h; sourceTree = "<group>"; };
+		EC10969E1CD10285006A8484 /* NavBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavBarViewController.m; sourceTree = "<group>"; };
+		EC1096A01CD102CA006A8484 /* TestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
+		EC1096A11CD102CA006A8484 /* TestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
 		EC30ACBE1CCD26FE005BD274 /* ZXYGooView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYGooView.h; sourceTree = "<group>"; };
 		EC30ACBF1CCD26FE005BD274 /* ZXYGooView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYGooView.m; sourceTree = "<group>"; };
 		EC30ACC01CCD26FE005BD274 /* ZXYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYTabBar.h; sourceTree = "<group>"; };
@@ -135,6 +151,7 @@
 				852B87F61C4F936E00D9479A /* AppDelegate.m */,
 				EC3531F71CBBB794006D0F50 /* PageViewController.h */,
 				EC3531F81CBBB794006D0F50 /* PageViewController.m */,
+				EC10969C1CD1026D006A8484 /* NavBarController */,
 				EC30ACCF1CCDB262005BD274 /* GooViewController */,
 				EC30ACC71CCD27D7005BD274 /* TabBarViewControllor */,
 				ECECDC771CC9FBAA00FC8F34 /* AnimationController */,
@@ -192,6 +209,30 @@
 			path = PickImgeVIewController;
 			sourceTree = "<group>";
 		};
+		EC1096911CD101F5006A8484 /* ZXYNavgationBar */ = {
+			isa = PBXGroup;
+			children = (
+				EC1096921CD101F5006A8484 /* ZXYHorizontalNavBar.xib */,
+				EC1096931CD101F5006A8484 /* ZXYNavBarItem.h */,
+				EC1096941CD101F5006A8484 /* ZXYNavBarItem.m */,
+				EC1096951CD101F5006A8484 /* ZXYNavBarView.h */,
+				EC1096961CD101F5006A8484 /* ZXYNavBarView.m */,
+				EC1096971CD101F5006A8484 /* ZXYVerticalNavBar.xib */,
+			);
+			path = ZXYNavgationBar;
+			sourceTree = "<group>";
+		};
+		EC10969C1CD1026D006A8484 /* NavBarController */ = {
+			isa = PBXGroup;
+			children = (
+				EC10969D1CD10285006A8484 /* NavBarViewController.h */,
+				EC10969E1CD10285006A8484 /* NavBarViewController.m */,
+				EC1096A01CD102CA006A8484 /* TestTableViewController.h */,
+				EC1096A11CD102CA006A8484 /* TestTableViewController.m */,
+			);
+			path = NavBarController;
+			sourceTree = "<group>";
+		};
 		EC30ACBD1CCD26FE005BD274 /* ZXYTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +278,7 @@
 		EC3531F21CBBB47E006D0F50 /* Kit */ = {
 			isa = PBXGroup;
 			children = (
+				EC1096911CD101F5006A8484 /* ZXYNavgationBar */,
 				EC30ADA31CD06905005BD274 /* ZXYGraph */,
 				EC30ACBD1CCD26FE005BD274 /* ZXYTabBar */,
 				ECECDC641CC9FA7400FC8F34 /* ZXYAnimationKit */,
@@ -370,11 +412,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC10969B1CD101F5006A8484 /* ZXYVerticalNavBar.xib in Resources */,
 				852B88021C4F936E00D9479A /* LaunchScreen.storyboard in Resources */,
 				EC0AA2B81CC7B13500CACA44 /* ZXYsave.png in Resources */,
 				852B87FF1C4F936E00D9479A /* Assets.xcassets in Resources */,
 				EC0AA2B51CC7B13500CACA44 /* ZXYback.png in Resources */,
 				852B87FD1C4F936E00D9479A /* Main.storyboard in Resources */,
+				EC1096981CD101F5006A8484 /* ZXYHorizontalNavBar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +432,7 @@
 				EC0AA2AC1CC7B08300CACA44 /* UIColor+ZXYColor.m in Sources */,
 				ECECDC721CC9FA7400FC8F34 /* ZXYKeyframeAnimation.m in Sources */,
 				EC0AA2B71CC7B13500CACA44 /* ZXYPickImageViewController.m in Sources */,
+				EC10969A1CD101F5006A8484 /* ZXYNavBarView.m in Sources */,
 				852B87F71C4F936E00D9479A /* AppDelegate.m in Sources */,
 				EC0AA2AD1CC7B08300CACA44 /* UIImage+ZXYImage.m in Sources */,
 				ECECDC7A1CC9FBC200FC8F34 /* AnimationViewController.m in Sources */,
@@ -398,6 +443,7 @@
 				EC30ACC61CCD26FE005BD274 /* ZXYTabBarItem.m in Sources */,
 				EC30ACC41CCD26FE005BD274 /* ZXYGooView.m in Sources */,
 				EC3531F61CBBB47E006D0F50 /* ZXYPageView.m in Sources */,
+				EC1096A21CD102CA006A8484 /* TestTableViewController.m in Sources */,
 				EC0AA2BC1CC7B1A300CACA44 /* PickImageViewController.m in Sources */,
 				ECECDC711CC9FA7400FC8F34 /* ZXYAnimationMaker.m in Sources */,
 				EC3531F91CBBB794006D0F50 /* PageViewController.m in Sources */,
@@ -405,6 +451,8 @@
 				EC30ACD21CCDB282005BD274 /* GooViewController.m in Sources */,
 				ECECDC701CC9FA7400FC8F34 /* ZXYAnimation.m in Sources */,
 				EC4CCCEF1CC3D25500BD08E4 /* MenuViewController.m in Sources */,
+				EC1096991CD101F5006A8484 /* ZXYNavBarItem.m in Sources */,
+				EC10969F1CD10285006A8484 /* NavBarViewController.m in Sources */,
 				EC30ACCA1CCD27D7005BD274 /* ZXYTabBarController.m in Sources */,
 				EC4CCCEA1CC3D0D500BD08E4 /* ZXYMenuView.m in Sources */,
 				EC4CCCEB1CC3D0D500BD08E4 /* ZXYMenuViewController.m in Sources */,

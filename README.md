@@ -59,7 +59,6 @@
     tabBar.selectedBackColor = [UIColor greenColor];
     tabBar.backgroundColor = [UIColor orangeColor];
     _bar = tabBar;
-    [self.view addSubview:tabBar];
 }
  ```
  - 参考代理相关代码：
@@ -85,5 +84,37 @@
 
 ```objc
 - (void)tabBar:(ZXYTabBar *)tabBar didClickItem:(ZXYTabBarItem *)item；
+
+ ```
+##  ZXYNavBarView
+
+
+- 使用方法
+    - 导入`ZXYNavgationBar`文件夹
+    - 创建一个ViewController；
+    - 引入`ZXYNavBarView.h`头文件，并遵守 ` <ZXYNavBarViewDelegate>`
+    - setUpNavBar
+
+```objc
+- (void)setUpNavBar
+{
+    ZXYNavBarView *navBar = [ZXYNavBarView navBarView];
+    navBar.frame = self.view.frame;
+    navBar.delegate = self;
+    navBar.titleColor = [UIColor redColor];
+    navBar.selectedColor = [UIColor greenColor];
+    [self.view addSubview:navBar];
+}
+ ```
+ - 参考代理相关代码：
+
+```objc
+
+@protocol  ZXYNavBarViewDelegate<NSObject>
+@optional
+- (NSString *)navBarView:(ZXYNavBarView *)navBarView titleAtIndex:(NSInteger)index;
+- (void)navBarView:(ZXYNavBarView *)navBarView didScrollAtIndexPath:(NSInteger)index;
+
+@end
 
  ```

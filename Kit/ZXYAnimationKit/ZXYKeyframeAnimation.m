@@ -66,6 +66,8 @@
         self.fromValue = ZXYBoxValue(_layer.borderColor);
     }else if ([self.keyPath isEqualToString:@"opacity"]){
         self.fromValue = ZXYBoxValue(_layer.opacity);
+    }else if ([self.keyPath isEqualToString:@"strokeEnd"]){
+        self.fromValue = ZXYBoxValue(0);
     }
 }
 - (void)setFromValue:(id)fromValue{

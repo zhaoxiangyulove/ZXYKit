@@ -11,5 +11,5 @@
 @class ZXYAnimationMaker;
 
 @interface CALayer (ZXYAnimation)
-- (void)makeAnimations:(void(^)(ZXYAnimationMaker *make))block;
+- (void)makeAnimations:(void(^)(ZXYAnimationMaker *make))block completion:(void (^)(BOOL finished))completion;
 @end

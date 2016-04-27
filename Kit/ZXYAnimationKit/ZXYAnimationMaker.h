@@ -38,10 +38,11 @@
 @property (nonatomic, strong, readonly) ZXYAnimation *borderWidth;
 @property (nonatomic, strong, readonly) ZXYAnimation *borderColor;
 @property (nonatomic, strong, readonly) ZXYAnimation *opacity;
+@property (nonatomic, strong, readonly) ZXYAnimation *strokeEnd;
 
 - (ZXYAnimationMaker * (^)(float count))repeatCount;
 - (ZXYAnimationMaker * (^)(float duration))duration;
 - (ZXYAnimationMaker * (^)(BOOL autoreverses))autoreverses;
 - (instancetype)initWithLayer:(CALayer *)layer;
-- (void)install;
+- (void)installWithCompletion:(void (^)(BOOL finished))completion;
 @end

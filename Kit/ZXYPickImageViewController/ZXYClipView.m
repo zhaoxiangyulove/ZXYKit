@@ -111,11 +111,11 @@
 }
 - (void)setToolBar{
     //backBtn
-    UIButton *backBtn = [self buttonWithName:@"ZXYback" frame:CGRectMake(30, 30, 40, 40)];
+    UIButton *backBtn = [self buttonWithName:@"ZXYback" frame:CGRectMake(25, 25, 40, 40)];
     [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:backBtn];
     //chooseBtn
-    UIButton *chooseBtn = [self buttonWithName:@"ZXYsave" frame:CGRectMake(screenW - 70, 30, 40, 40)];
+    UIButton *chooseBtn = [self buttonWithName:@"ZXYsave" frame:CGRectMake(screenW - 65, 25, 40, 40)];
     [chooseBtn addTarget:self action:@selector(clicked) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:chooseBtn];
 }

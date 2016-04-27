@@ -59,9 +59,9 @@ typedef enum : NSUInteger {
 
 /** 滚动方向 */
 @property (nonatomic) ScrollDirection scrollDirection;
-/** 滚动间隔时间 */
+/** 滚动间隔时间 间隔不设置或设置为0 均不轮播*/
 @property (nonatomic, assign) NSTimeInterval interval;
-/** 滚动视图大小 */
+/** 滚动视图大小，默认为父视图大小 */
 @property(nonatomic) CGRect            contentViewFrame;
 /** 代理 */
 @property (nonatomic, weak) id<ZXYPageViewDelegate> delegate;

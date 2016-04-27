@@ -20,6 +20,8 @@
 @property (nonatomic, assign) NSInteger badgeValue;
 /** 代理 */
 @property (nonatomic, weak) id<ZXYGooViewDelegate> delegate;
+/** 字体 */
+@property (nonatomic, strong) UIFont *titleFont;
 
 + (instancetype)gooViewWithBadgeValue:(NSInteger)badgeValue;
 
