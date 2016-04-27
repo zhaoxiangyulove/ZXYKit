@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZXYNavBarController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZXYNavBarView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHP-hK-Be7">
+                    <rect key="frame" x="0.0" y="40" width="600" height="560"/>
+                    <connections>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="EQN-8Z-vjB"/>
+                    </connections>
+                </scrollView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQi-Cl-UQY">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="pDZ-DL-l06"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="AQi-Cl-UQY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7FV-vg-9QM"/>
+                <constraint firstItem="AQi-Cl-UQY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DJI-ZU-Jqs"/>
+                <constraint firstAttribute="bottom" secondItem="gHP-hK-Be7" secondAttribute="bottom" id="Mh4-38-sER"/>
+                <constraint firstAttribute="trailing" secondItem="AQi-Cl-UQY" secondAttribute="trailing" id="jyv-P8-FvQ"/>
+                <constraint firstAttribute="trailing" secondItem="gHP-hK-Be7" secondAttribute="trailing" id="uL4-2Z-LDk"/>
+                <constraint firstItem="gHP-hK-Be7" firstAttribute="top" secondItem="AQi-Cl-UQY" secondAttribute="bottom" id="vJp-II-Jhp"/>
+                <constraint firstItem="gHP-hK-Be7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zgu-cW-HQr"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <connections>
+                <outlet property="contentView" destination="gHP-hK-Be7" id="D4s-OV-wIV"/>
+                <outlet property="titleView" destination="AQi-Cl-UQY" id="NQL-j7-Ysp"/>
+            </connections>
+        </view>
+    </objects>
+</document>
