@@ -14,10 +14,8 @@
 		852B88021C4F936E00D9479A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852B88001C4F936E00D9479A /* LaunchScreen.storyboard */; };
 		EC0AA2AC1CC7B08300CACA44 /* UIColor+ZXYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0AA2A91CC7B08300CACA44 /* UIColor+ZXYColor.m */; };
 		EC0AA2AD1CC7B08300CACA44 /* UIImage+ZXYImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0AA2AB1CC7B08300CACA44 /* UIImage+ZXYImage.m */; };
-		EC0AA2B51CC7B13500CACA44 /* ZXYback.png in Resources */ = {isa = PBXBuildFile; fileRef = EC0AA2AF1CC7B13500CACA44 /* ZXYback.png */; };
 		EC0AA2B61CC7B13500CACA44 /* ZXYClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0AA2B11CC7B13500CACA44 /* ZXYClipView.m */; };
 		EC0AA2B71CC7B13500CACA44 /* ZXYPickImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0AA2B31CC7B13500CACA44 /* ZXYPickImageViewController.m */; };
-		EC0AA2B81CC7B13500CACA44 /* ZXYsave.png in Resources */ = {isa = PBXBuildFile; fileRef = EC0AA2B41CC7B13500CACA44 /* ZXYsave.png */; };
 		EC0AA2BC1CC7B1A300CACA44 /* PickImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0AA2BB1CC7B1A300CACA44 /* PickImageViewController.m */; };
 		EC1096981CD101F5006A8484 /* ZXYHorizontalNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC1096921CD101F5006A8484 /* ZXYHorizontalNavBar.xib */; };
 		EC1096991CD101F5006A8484 /* ZXYNavBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1096941CD101F5006A8484 /* ZXYNavBarItem.m */; };
@@ -58,12 +56,10 @@
 		EC0AA2A91CC7B08300CACA44 /* UIColor+ZXYColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZXYColor.m"; sourceTree = "<group>"; };
 		EC0AA2AA1CC7B08300CACA44 /* UIImage+ZXYImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZXYImage.h"; sourceTree = "<group>"; };
 		EC0AA2AB1CC7B08300CACA44 /* UIImage+ZXYImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZXYImage.m"; sourceTree = "<group>"; };
-		EC0AA2AF1CC7B13500CACA44 /* ZXYback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZXYback.png; sourceTree = "<group>"; };
 		EC0AA2B01CC7B13500CACA44 /* ZXYClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYClipView.h; sourceTree = "<group>"; };
 		EC0AA2B11CC7B13500CACA44 /* ZXYClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYClipView.m; sourceTree = "<group>"; };
 		EC0AA2B21CC7B13500CACA44 /* ZXYPickImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYPickImageViewController.h; sourceTree = "<group>"; };
 		EC0AA2B31CC7B13500CACA44 /* ZXYPickImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYPickImageViewController.m; sourceTree = "<group>"; };
-		EC0AA2B41CC7B13500CACA44 /* ZXYsave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZXYsave.png; sourceTree = "<group>"; };
 		EC0AA2BA1CC7B1A300CACA44 /* PickImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickImageViewController.h; sourceTree = "<group>"; };
 		EC0AA2BB1CC7B1A300CACA44 /* PickImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickImageViewController.m; sourceTree = "<group>"; };
 		EC1096921CD101F5006A8484 /* ZXYHorizontalNavBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZXYHorizontalNavBar.xib; sourceTree = "<group>"; };
@@ -190,12 +186,10 @@
 		EC0AA2AE1CC7B13500CACA44 /* ZXYPickImageViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EC0AA2AF1CC7B13500CACA44 /* ZXYback.png */,
 				EC0AA2B01CC7B13500CACA44 /* ZXYClipView.h */,
 				EC0AA2B11CC7B13500CACA44 /* ZXYClipView.m */,
 				EC0AA2B21CC7B13500CACA44 /* ZXYPickImageViewController.h */,
 				EC0AA2B31CC7B13500CACA44 /* ZXYPickImageViewController.m */,
-				EC0AA2B41CC7B13500CACA44 /* ZXYsave.png */,
 			);
 			path = ZXYPickImageViewController;
 			sourceTree = "<group>";
@@ -414,9 +408,7 @@
 			files = (
 				EC10969B1CD101F5006A8484 /* ZXYVerticalNavBar.xib in Resources */,
 				852B88021C4F936E00D9479A /* LaunchScreen.storyboard in Resources */,
-				EC0AA2B81CC7B13500CACA44 /* ZXYsave.png in Resources */,
 				852B87FF1C4F936E00D9479A /* Assets.xcassets in Resources */,
-				EC0AA2B51CC7B13500CACA44 /* ZXYback.png in Resources */,
 				852B87FD1C4F936E00D9479A /* Main.storyboard in Resources */,
 				EC1096981CD101F5006A8484 /* ZXYHorizontalNavBar.xib in Resources */,
 			);

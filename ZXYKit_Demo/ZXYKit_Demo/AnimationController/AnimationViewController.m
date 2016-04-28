@@ -16,8 +16,7 @@
 /** shapeLayer */
 @property (nonatomic, weak) CAShapeLayer *shapeLayer;
 
-/** path */
-@property (nonatomic, strong) UIBezierPath *path;
+
 
 @end
 
@@ -31,7 +30,7 @@
     _redView.layer.transform = transfrom;
     _redView.layer.borderWidth = 5;
     _redView.layer.borderColor = [UIColor yellowColor].CGColor;
-    self.shapeLayer.path = self.path.CGPath;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,13 +60,13 @@
 //        NSLog(@"complete");
     }];
     
-    [_shapeLayer makeAnimations:^(ZXYAnimationMaker *make) {
-        make.strokeEnd.to(0.5);
-        make.duration(3);
-    } completion:^(BOOL finished) {
-        
-    }];
-    
+//    [_shapeLayer makeAnimations:^(ZXYAnimationMaker *make) {
+//        make.strokeEnd.to(0.5);
+//        make.duration(3);
+//    } completion:^(BOOL finished) {
+//        
+//    }];
+//    
 }
 
 /*
@@ -79,16 +78,8 @@
     // Pass the selected object to the new view controller.
 }
 */
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    UITouch *touch = [touches anyObject];
-    CGPoint locationP = [touch locationInView:self.view];
-//    [self.path moveToPoint:locationP];
-}
--(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    UITouch *touch = [touches anyObject];
-    CGPoint targetP = [touch locationInView:self.view];
-//    [self.path addLineToPoint:targetP];
-}
+
+
 
 
 - (CAShapeLayer *)shapeLayer {
@@ -103,15 +94,5 @@
 	return _shapeLayer;
 }
 
-- (UIBezierPath *)path {
-	if(_path == nil) {
-		_path = [UIBezierPath bezierPath];
-        [_path moveToPoint:CGPointMake(2, 500)];
-        [_path addLineToPoint:CGPointMake(400, 500)];
-        [_path stroke];
-        
-	}
-	return _path;
-}
 
 @end

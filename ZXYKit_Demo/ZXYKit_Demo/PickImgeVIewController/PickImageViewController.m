@@ -42,7 +42,7 @@
     
 }
 #pragma mark - <ZXYPickImageViewControllerDelegate>
-- (void)pickImageViewController:(ZXYPickImageViewController *)picker didFinishPickingImage:(UIImage *)image{
+- (void)pickImageViewController:(ZXYPickImageViewController *)picker didFinishPickingClipImage:(UIImage *)image{
     
     self.imageView.image = image;
 

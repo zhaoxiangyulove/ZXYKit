@@ -10,7 +10,9 @@
 @class ZXYPickImageViewController;
 
 @protocol ZXYPickImageViewControllerDelegate <NSObject>
-- (void)pickImageViewController:(ZXYPickImageViewController *)picker didFinishPickingImage:(UIImage *)image;
+@optional
+- (void)pickImageViewController:(ZXYPickImageViewController *)picker didFinishPickingClipImage:(UIImage *)image;
+- (void)pickImageViewController:(ZXYPickImageViewController *)picker didFinishPickingOriginalImage:(UIImage *)image;
 
 @end
 
