@@ -35,6 +35,9 @@
 		EC4CCCEA1CC3D0D500BD08E4 /* ZXYMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4CCCE71CC3D0D500BD08E4 /* ZXYMenuView.m */; };
 		EC4CCCEB1CC3D0D500BD08E4 /* ZXYMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4CCCE91CC3D0D500BD08E4 /* ZXYMenuViewController.m */; };
 		EC4CCCEF1CC3D25500BD08E4 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4CCCEE1CC3D25500BD08E4 /* MenuViewController.m */; };
+		EC69BD081CDF7DDB00D7223C /* ZXYNetTask.m in Sources */ = {isa = PBXBuildFile; fileRef = EC69BD051CDF7DDB00D7223C /* ZXYNetTask.m */; };
+		EC69BD091CDF7DDB00D7223C /* ZXYNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EC69BD071CDF7DDB00D7223C /* ZXYNetTool.m */; };
+		EC69BD0D1CDF7E0300D7223C /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = EC69BD0C1CDF7E0300D7223C /* NSString+Hash.m */; };
 		ECECDC6F1CC9FA7400FC8F34 /* CALayer+ZXYAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = ECECDC671CC9FA7400FC8F34 /* CALayer+ZXYAnimation.m */; };
 		ECECDC701CC9FA7400FC8F34 /* ZXYAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = ECECDC691CC9FA7400FC8F34 /* ZXYAnimation.m */; };
 		ECECDC711CC9FA7400FC8F34 /* ZXYAnimationMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = ECECDC6B1CC9FA7400FC8F34 /* ZXYAnimationMaker.m */; };
@@ -96,6 +99,12 @@
 		EC4CCCE91CC3D0D500BD08E4 /* ZXYMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYMenuViewController.m; sourceTree = "<group>"; };
 		EC4CCCED1CC3D25500BD08E4 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		EC4CCCEE1CC3D25500BD08E4 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		EC69BD041CDF7DDB00D7223C /* ZXYNetTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYNetTask.h; sourceTree = "<group>"; };
+		EC69BD051CDF7DDB00D7223C /* ZXYNetTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYNetTask.m; sourceTree = "<group>"; };
+		EC69BD061CDF7DDB00D7223C /* ZXYNetTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYNetTool.h; sourceTree = "<group>"; };
+		EC69BD071CDF7DDB00D7223C /* ZXYNetTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYNetTool.m; sourceTree = "<group>"; };
+		EC69BD0B1CDF7E0300D7223C /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		EC69BD0C1CDF7E0300D7223C /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
 		ECECDC651CC9FA7400FC8F34 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
 		ECECDC661CC9FA7400FC8F34 /* CALayer+ZXYAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+ZXYAnimation.h"; sourceTree = "<group>"; };
 		ECECDC671CC9FA7400FC8F34 /* CALayer+ZXYAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+ZXYAnimation.m"; sourceTree = "<group>"; };
@@ -272,6 +281,7 @@
 		EC3531F21CBBB47E006D0F50 /* Kit */ = {
 			isa = PBXGroup;
 			children = (
+				EC69BD031CDF7DDB00D7223C /* NetTool */,
 				EC1096911CD101F5006A8484 /* ZXYNavgationBar */,
 				EC30ADA31CD06905005BD274 /* ZXYGraph */,
 				EC30ACBD1CCD26FE005BD274 /* ZXYTabBar */,
@@ -311,6 +321,27 @@
 				EC4CCCEE1CC3D25500BD08E4 /* MenuViewController.m */,
 			);
 			path = MenuViewController;
+			sourceTree = "<group>";
+		};
+		EC69BD031CDF7DDB00D7223C /* NetTool */ = {
+			isa = PBXGroup;
+			children = (
+				EC69BD0A1CDF7E0300D7223C /* MD5 */,
+				EC69BD041CDF7DDB00D7223C /* ZXYNetTask.h */,
+				EC69BD051CDF7DDB00D7223C /* ZXYNetTask.m */,
+				EC69BD061CDF7DDB00D7223C /* ZXYNetTool.h */,
+				EC69BD071CDF7DDB00D7223C /* ZXYNetTool.m */,
+			);
+			path = NetTool;
+			sourceTree = "<group>";
+		};
+		EC69BD0A1CDF7E0300D7223C /* MD5 */ = {
+			isa = PBXGroup;
+			children = (
+				EC69BD0B1CDF7E0300D7223C /* NSString+Hash.h */,
+				EC69BD0C1CDF7E0300D7223C /* NSString+Hash.m */,
+			);
+			path = MD5;
 			sourceTree = "<group>";
 		};
 		ECECDC641CC9FA7400FC8F34 /* ZXYAnimationKit */ = {
@@ -438,13 +469,16 @@
 				EC1096A21CD102CA006A8484 /* TestTableViewController.m in Sources */,
 				EC0AA2BC1CC7B1A300CACA44 /* PickImageViewController.m in Sources */,
 				ECECDC711CC9FA7400FC8F34 /* ZXYAnimationMaker.m in Sources */,
+				EC69BD0D1CDF7E0300D7223C /* NSString+Hash.m in Sources */,
 				EC3531F91CBBB794006D0F50 /* PageViewController.m in Sources */,
 				ECECDC761CC9FB8F00FC8F34 /* GraphViewController.m in Sources */,
 				EC30ACD21CCDB282005BD274 /* GooViewController.m in Sources */,
+				EC69BD081CDF7DDB00D7223C /* ZXYNetTask.m in Sources */,
 				ECECDC701CC9FA7400FC8F34 /* ZXYAnimation.m in Sources */,
 				EC4CCCEF1CC3D25500BD08E4 /* MenuViewController.m in Sources */,
 				EC1096991CD101F5006A8484 /* ZXYNavBarItem.m in Sources */,
 				EC10969F1CD10285006A8484 /* NavBarViewController.m in Sources */,
+				EC69BD091CDF7DDB00D7223C /* ZXYNetTool.m in Sources */,
 				EC30ACCA1CCD27D7005BD274 /* ZXYTabBarController.m in Sources */,
 				EC4CCCEA1CC3D0D500BD08E4 /* ZXYMenuView.m in Sources */,
 				EC4CCCEB1CC3D0D500BD08E4 /* ZXYMenuViewController.m in Sources */,
