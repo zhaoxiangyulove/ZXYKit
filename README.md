@@ -119,7 +119,7 @@
 
  ```
  
- ##  ZXYStateBarHUD
+##  ZXYStateBarHUD
 - 使用方法
     - 导入`ZXYStateBarHUD`文件夹
     - 引入`ZXYStateBarHUD.h`头文件
