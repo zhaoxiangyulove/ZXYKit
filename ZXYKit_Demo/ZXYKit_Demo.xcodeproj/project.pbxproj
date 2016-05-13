@@ -43,6 +43,8 @@
 		EC9E6A1D1CE573F800466225 /* ZXYTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9E6A071CE573F800466225 /* ZXYTabBarItem.m */; };
 		EC9E6A231CE5740400466225 /* UIColor+ZXYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9E6A201CE5740400466225 /* UIColor+ZXYColor.m */; };
 		EC9E6A241CE5740400466225 /* UIImage+ZXYImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9E6A221CE5740400466225 /* UIImage+ZXYImage.m */; };
+		EC9E6A531CE61A9A00466225 /* ZXYStateBarHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EC9E6A501CE61A9A00466225 /* ZXYStateBarHUD.bundle */; };
+		EC9E6A541CE61A9A00466225 /* ZXYStateBarHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9E6A521CE61A9A00466225 /* ZXYStateBarHUD.m */; };
 		ECECDC761CC9FB8F00FC8F34 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECECDC751CC9FB8F00FC8F34 /* GraphViewController.m */; };
 		ECECDC7A1CC9FBC200FC8F34 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECECDC791CC9FBC200FC8F34 /* AnimationViewController.m */; };
 /* End PBXBuildFile section */
@@ -118,6 +120,9 @@
 		EC9E6A201CE5740400466225 /* UIColor+ZXYColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZXYColor.m"; sourceTree = "<group>"; };
 		EC9E6A211CE5740400466225 /* UIImage+ZXYImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZXYImage.h"; sourceTree = "<group>"; };
 		EC9E6A221CE5740400466225 /* UIImage+ZXYImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZXYImage.m"; sourceTree = "<group>"; };
+		EC9E6A501CE61A9A00466225 /* ZXYStateBarHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZXYStateBarHUD.bundle; sourceTree = "<group>"; };
+		EC9E6A511CE61A9A00466225 /* ZXYStateBarHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXYStateBarHUD.h; sourceTree = "<group>"; };
+		EC9E6A521CE61A9A00466225 /* ZXYStateBarHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXYStateBarHUD.m; sourceTree = "<group>"; };
 		ECECDC741CC9FB8F00FC8F34 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
 		ECECDC751CC9FB8F00FC8F34 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		ECECDC781CC9FBC200FC8F34 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
@@ -233,6 +238,7 @@
 		EC9E69D11CE573F800466225 /* Kit */ = {
 			isa = PBXGroup;
 			children = (
+				EC9E6A4F1CE61A9A00466225 /* ZXYStateBarHUD */,
 				EC9E69D21CE573F800466225 /* NetTool */,
 				EC9E69DA1CE573F800466225 /* PageView */,
 				EC9E69DD1CE573F800466225 /* ZXYAnimationKit */,
@@ -383,6 +389,16 @@
 			name = PageViewController;
 			sourceTree = "<group>";
 		};
+		EC9E6A4F1CE61A9A00466225 /* ZXYStateBarHUD */ = {
+			isa = PBXGroup;
+			children = (
+				EC9E6A501CE61A9A00466225 /* ZXYStateBarHUD.bundle */,
+				EC9E6A511CE61A9A00466225 /* ZXYStateBarHUD.h */,
+				EC9E6A521CE61A9A00466225 /* ZXYStateBarHUD.m */,
+			);
+			path = ZXYStateBarHUD;
+			sourceTree = "<group>";
+		};
 		ECECDC731CC9FB8F00FC8F34 /* GraphViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				852B88021C4F936E00D9479A /* LaunchScreen.storyboard in Resources */,
+				EC9E6A531CE61A9A00466225 /* ZXYStateBarHUD.bundle in Resources */,
 				EC9E6A181CE573F800466225 /* ZXYVerticalNavBar.xib in Resources */,
 				852B87FF1C4F936E00D9479A /* Assets.xcassets in Resources */,
 				852B87FD1C4F936E00D9479A /* Main.storyboard in Resources */,
@@ -491,6 +508,7 @@
 				EC1096A21CD102CA006A8484 /* TestTableViewController.m in Sources */,
 				EC0AA2BC1CC7B1A300CACA44 /* PickImageViewController.m in Sources */,
 				EC3531F91CBBB794006D0F50 /* PageViewController.m in Sources */,
+				EC9E6A541CE61A9A00466225 /* ZXYStateBarHUD.m in Sources */,
 				EC9E6A0C1CE573F800466225 /* CALayer+ZXYAnimation.m in Sources */,
 				EC9E6A111CE573F800466225 /* ZXYGraphModel.m in Sources */,
 				EC9E6A0A1CE573F800466225 /* ZXYNetTool.m in Sources */,
