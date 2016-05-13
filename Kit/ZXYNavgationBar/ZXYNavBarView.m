@@ -151,14 +151,14 @@
         for (ZXYNavBarItem *otherItem in self.titleView.subviews) {
             if (otherItem != item) otherItem.scale = 0.0;
         }
-        
         UIViewController *showVc = _delegate.childViewControllers[index];
-        if (showVc.view.superview) return;
-        showVc.view.frame = CGRectMake(offsetX, 0, width, height);
-        [scrollView addSubview:showVc.view];
         if ([_delegate respondsToSelector:@selector(navBarView:didScrollAtIndexPath:)]) {
             [_delegate navBarView:self didScrollAtIndexPath:index];
         }
+        if (showVc.view.superview) return;
+        showVc.view.frame = CGRectMake(offsetX, 0, width, height);
+        [scrollView addSubview:showVc.view];
+        
         
     }
 }

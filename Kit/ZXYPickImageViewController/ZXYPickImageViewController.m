@@ -41,21 +41,40 @@
     self.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
     self.delegate = self;
     // Do any additional setup after loading the view.
+    
+}
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(chooseImage) name:@"chooseImage" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(back) name:@"back" object:nil];
 }
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 - (void)chooseImage{
-    CGRect frame = CGRectMake(leftMargin - _clipView.offX, topMargin - _clipView.offY, clipBorder, clipBorder);
-    // 开启上下文
-    UIImage *image = [_clipView.image clipImageWithFrame:frame scale:_clipView.scaleRate];
-    image = [image clipImageWithBorderWidth:_border*_clipView.scaleRate borderColor:_borderColor cornerRadius:_radiusRate];
-    //生成一张新的图片
-    if ([self.clipDelegate respondsToSelector:@selector(pickImageViewController:didFinishPickingImage:)]) {
-        [self.clipDelegate pickImageViewController:self didFinishPickingImage: image];
+    if ([_clipDelegate respondsToSelector:@selector(pickImageViewController:didFinishPickingOriginalImage:)]) {
+        [_clipDelegate pickImageViewController:self didFinishPickingOriginalImage:_clipView.image];
+    }
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        CGRect frame = CGRectMake(leftMargin - _clipView.offX, topMargin - _clipView.offY, clipBorder, clipBorder);
+        // 开启上下文
+        UIImage *image = [_clipView.image clipImageWithFrame:frame scale:_clipView.scaleRate];
+        if (_border != 0) {
+            image = [image clipImageWithBorderWidth:_border*_clipView.scaleRate borderColor:_borderColor cornerRadius:_radiusRate];
+        }
+        //生成一张新的图片
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if ([_clipDelegate respondsToSelector:@selector(pickImageViewController:didFinishPickingClipImage:)]) {
+                [_clipDelegate pickImageViewController:self didFinishPickingClipImage: image];
+            }
+        });
+        
         [self back];
         [self dismissViewControllerAnimated:YES completion:nil];
-    }
+
+    });
 }
 - (void)back{
     [UIView animateWithDuration:0.2 animations:^{
@@ -76,7 +95,6 @@
 
 
 #pragma mark - 懒加载
-
 - (ZXYClipView *)clipView {
 	if(_clipView == nil) {
 		_clipView = [ZXYClipView clipView];
@@ -89,8 +107,5 @@
         }];
 	}
 	return _clipView;
-}
-- (void)dealloc{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end
