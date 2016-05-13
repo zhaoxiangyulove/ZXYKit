@@ -31,7 +31,7 @@
 /**
  * 显示警告信息
  */
-+ (void)showWarning:(NSString *)msg；
++ (void)showWarning:(NSString *)msg;
 /**
  * 显示正在处理的信息
  */
